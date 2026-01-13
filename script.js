@@ -12,6 +12,10 @@ const themeButton = document.querySelector('#theme-toggle');
 themeButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 
-});
+    if (document.body.classList.contains('dark-mode')) {
+        themeButton.textContent = "Mode Clair";
+    } else {
+        themeButton.textContent = "Mode Sombre";
+    }
 
-document.body.classList.contains('dark-mode')
+});
