@@ -19,3 +19,17 @@ themeButton.addEventListener('click', () => {
     }
 
 });
+
+const tousLesTitresa = document.querySelectorAll('a');
+console.log(tousLesTitresa);
+
+const href = lien.getAttribute('href');
+const section = document.querySelector(href);
+
+tousLesTitresa.forEach(titre => {
+    titre.addEventListener('click', () => {
+        event.preventDefault()
+        console.log('Bouton cliqué !');
+        section.scrollIntoView( {behavior: "smooth"} );
+    });
+});
